@@ -23,7 +23,7 @@ elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
 endif()
 
 set(TEST_NAME ${PROJECT_NAME}_tests)
-add_executable(${TEST_NAME} MyString.cpp MyString.h Tests.cpp)
+add_executable(${TEST_NAME} Task/MyString.cpp Task/MyString.h Task.Tests/MyString.Tests.cpp)
 target_link_libraries(${TEST_NAME} gtest_main pthread)
 
 enable_testing()
